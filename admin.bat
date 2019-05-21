@@ -1,1 +1,0 @@
-rails g scaffold blog_external id:bigint, user_id:bigint, name:character varying
