@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Blog Externals</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Userid</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Url</th>
+      <th>Filtertags</th>
+      <th>Failedlastsync</th>
+      <th>Timemodified</th>
+      <th>Timefetched</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @blog_externals.each do |blog_external| %>
+      <tr>
+        <td><%= blog_external.id %></td>
+        <td><%= blog_external.userid %></td>
+        <td><%= blog_external.name %></td>
+        <td><%= blog_external.description %></td>
+        <td><%= blog_external.url %></td>
+        <td><%= blog_external.filtertags %></td>
+        <td><%= blog_external.failedlastsync %></td>
+        <td><%= blog_external.timemodified %></td>
+        <td><%= blog_external.timefetched %></td>
+        <td><%= link_to 'Show', blog_external %></td>
+        <td><%= link_to 'Edit', edit_blog_external_path(blog_external) %></td>
+        <td><%= link_to 'Destroy', blog_external, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Blog External', new_blog_external_path %>

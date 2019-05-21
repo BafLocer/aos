@@ -1,0 +1,62 @@
+<%= form_with(model: blog_external, local: true) do |form| %>
+  <% if blog_external.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(blog_external.errors.count, "error") %> prohibited this blog_external from being saved:</h2>
+
+      <ul>
+      <% blog_external.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :id %>
+    <%= form.number_field :id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :userid %>
+    <%= form.number_field :userid %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :url %>
+    <%= form.text_area :url %>
+  </div>
+
+  <div class="field">
+    <%= form.label :filtertags %>
+    <%= form.text_field :filtertags %>
+  </div>
+
+  <div class="field">
+    <%= form.label :failedlastsync %>
+    <%= form.number_field :failedlastsync %>
+  </div>
+
+  <div class="field">
+    <%= form.label :timemodified %>
+    <%= form.number_field :timemodified %>
+  </div>
+
+  <div class="field">
+    <%= form.label :timefetched %>
+    <%= form.number_field :timefetched %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

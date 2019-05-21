@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: 1
+  userid: 1
+  name: MyString
+  description: MyText
+  url: MyText
+  filtertags: MyString
+  failedlastsync: 1
+  timemodified: 1
+  timefetched: 1
+
+two:
+  id: 1
+  userid: 1
+  name: MyString
+  description: MyText
+  url: MyText
+  filtertags: MyString
+  failedlastsync: 1
+  timemodified: 1
+  timefetched: 1

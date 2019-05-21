@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id:</strong>
+  <%= @blog_external.id %>
+</p>
+
+<p>
+  <strong>Userid:</strong>
+  <%= @blog_external.userid %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @blog_external.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @blog_external.description %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @blog_external.url %>
+</p>
+
+<p>
+  <strong>Filtertags:</strong>
+  <%= @blog_external.filtertags %>
+</p>
+
+<p>
+  <strong>Failedlastsync:</strong>
+  <%= @blog_external.failedlastsync %>
+</p>
+
+<p>
+  <strong>Timemodified:</strong>
+  <%= @blog_external.timemodified %>
+</p>
+
+<p>
+  <strong>Timefetched:</strong>
+  <%= @blog_external.timefetched %>
+</p>
+
+<%= link_to 'Edit', edit_blog_external_path(@blog_external) %> |
+<%= link_to 'Back', blog_externals_path %>
