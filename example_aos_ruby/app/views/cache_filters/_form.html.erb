@@ -1,0 +1,42 @@
+<%= form_with(model: cache_filter, local: true) do |form| %>
+  <% if cache_filter.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(cache_filter.errors.count, "error") %> prohibited this cache_filter from being saved:</h2>
+
+      <ul>
+      <% cache_filter.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :filter %>
+    <%= form.text_field :filter %>
+  </div>
+
+  <div class="field">
+    <%= form.label :version %>
+    <%= form.number_field :version %>
+  </div>
+
+  <div class="field">
+    <%= form.label :md5key %>
+    <%= form.text_field :md5key %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rawtext %>
+    <%= form.text_area :rawtext %>
+  </div>
+
+  <div class="field">
+    <%= form.label :timemodified %>
+    <%= form.number_field :timemodified %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

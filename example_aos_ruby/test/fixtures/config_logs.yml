@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  userid: 1
+  timemodified: 1
+  plugin: MyString
+  name: MyString
+  value: MyText
+  oldvalue: MyText
+
+two:
+  userid: 1
+  timemodified: 1
+  plugin: MyString
+  name: MyString
+  value: MyText
+  oldvalue: MyText

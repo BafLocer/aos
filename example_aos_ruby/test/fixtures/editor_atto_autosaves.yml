@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  elementid: MyString
+  contextid: 1
+  pagehash: MyString
+  userid: 1
+  drafttext: MyText
+  draftid: 1
+  pageinstance: MyString
+  timemodified: 1
+
+two:
+  elementid: MyString
+  contextid: 1
+  pagehash: MyString
+  userid: 1
+  drafttext: MyText
+  draftid: 1
+  pageinstance: MyString
+  timemodified: 1

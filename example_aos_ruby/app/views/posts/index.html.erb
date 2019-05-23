@@ -1,0 +1,63 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Posts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Module</th>
+      <th>Userid</th>
+      <th>Courseid</th>
+      <th>Groupid</th>
+      <th>Moduleid</th>
+      <th>Coursemoduleid</th>
+      <th>Subject</th>
+      <th>Summary</th>
+      <th>Content</th>
+      <th>Uniquehash</th>
+      <th>Rating</th>
+      <th>Format</th>
+      <th>Summaryformat</th>
+      <th>Attachment</th>
+      <th>Publishstate</th>
+      <th>Lastmodified</th>
+      <th>Created</th>
+      <th>Usermodified</th>
+      <th>Blog association</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @posts.each do |post| %>
+      <tr>
+        <td><%= post.module %></td>
+        <td><%= post.userid %></td>
+        <td><%= post.courseid %></td>
+        <td><%= post.groupid %></td>
+        <td><%= post.moduleid %></td>
+        <td><%= post.coursemoduleid %></td>
+        <td><%= post.subject %></td>
+        <td><%= post.summary %></td>
+        <td><%= post.content %></td>
+        <td><%= post.uniquehash %></td>
+        <td><%= post.rating %></td>
+        <td><%= post.format %></td>
+        <td><%= post.summaryformat %></td>
+        <td><%= post.attachment %></td>
+        <td><%= post.publishstate %></td>
+        <td><%= post.lastmodified %></td>
+        <td><%= post.created %></td>
+        <td><%= post.usermodified %></td>
+        <td><%= post.blog_association %></td>
+        <td><%= link_to 'Show', post %></td>
+        <td><%= link_to 'Edit', edit_post_path(post) %></td>
+        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Post', new_post_path %>

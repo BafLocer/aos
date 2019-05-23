@@ -10,13 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_21_172107) do
+ActiveRecord::Schema.define(version: 2019_05_23_171819) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "blog_externals", id: false, force: :cascade do |t|
-    t.integer "id"
+  create_table "blog_associations", force: :cascade do |t|
+    t.integer "contextid"
+    t.integer "blogid"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "blog_externals", force: :cascade do |t|
     t.integer "userid"
     t.string "name"
     t.text "description"
@@ -29,4 +35,102 @@ ActiveRecord::Schema.define(version: 2019_05_21_172107) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "cache_filters", force: :cascade do |t|
+    t.string "filter"
+    t.integer "version"
+    t.string "md5key"
+    t.text "rawtext"
+    t.integer "timemodified"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "cache_flags", force: :cascade do |t|
+    t.string "flagtype"
+    t.string "name"
+    t.integer "timemodified"
+    t.text "value"
+    t.integer "expiry"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "comments", force: :cascade do |t|
+    t.integer "contextid"
+    t.string "component"
+    t.string "commentarea"
+    t.integer "itemid"
+    t.text "content"
+    t.integer "format"
+    t.integer "userid"
+    t.integer "timecreated"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "config_logs", force: :cascade do |t|
+    t.integer "userid"
+    t.integer "timemodified"
+    t.string "plugin"
+    t.string "name"
+    t.text "value"
+    t.text "oldvalue"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "config_plugins", force: :cascade do |t|
+    t.string "plugin"
+    t.string "name"
+    t.text "value"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "configs", force: :cascade do |t|
+    t.string "name"
+    t.text "value"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "editor_atto_autosaves", force: :cascade do |t|
+    t.string "elementid"
+    t.integer "contextid"
+    t.string "pagehash"
+    t.integer "userid"
+    t.text "drafttext"
+    t.integer "draftid"
+    t.string "pageinstance"
+    t.integer "timemodified"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "posts", force: :cascade do |t|
+    t.string "module"
+    t.integer "userid"
+    t.integer "courseid"
+    t.integer "groupid"
+    t.integer "moduleid"
+    t.integer "coursemoduleid"
+    t.string "subject"
+    t.text "summary"
+    t.text "content"
+    t.string "uniquehash"
+    t.integer "rating"
+    t.integer "format"
+    t.integer "summaryformat"
+    t.string "attachment"
+    t.string "publishstate"
+    t.integer "lastmodified"
+    t.integer "created"
+    t.integer "usermodified"
+    t.bigint "blog_association_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["blog_association_id"], name: "index_posts_on_blog_association_id"
+  end
+
+  add_foreign_key "posts", "blog_associations"
 end

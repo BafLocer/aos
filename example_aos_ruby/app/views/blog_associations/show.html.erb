@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Contextid:</strong>
+  <%= @blog_association.contextid %>
+</p>
+
+<p>
+  <strong>Blogid:</strong>
+  <%= @blog_association.blogid %>
+</p>
+
+<%= link_to 'Edit', edit_blog_association_path(@blog_association) %> |
+<%= link_to 'Back', blog_associations_path %>

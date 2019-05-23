@@ -1,0 +1,112 @@
+<%= form_with(model: post, local: true) do |form| %>
+  <% if post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+      <% post.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :module %>
+    <%= form.text_field :module %>
+  </div>
+
+  <div class="field">
+    <%= form.label :userid %>
+    <%= form.number_field :userid %>
+  </div>
+
+  <div class="field">
+    <%= form.label :courseid %>
+    <%= form.number_field :courseid %>
+  </div>
+
+  <div class="field">
+    <%= form.label :groupid %>
+    <%= form.number_field :groupid %>
+  </div>
+
+  <div class="field">
+    <%= form.label :moduleid %>
+    <%= form.number_field :moduleid %>
+  </div>
+
+  <div class="field">
+    <%= form.label :coursemoduleid %>
+    <%= form.number_field :coursemoduleid %>
+  </div>
+
+  <div class="field">
+    <%= form.label :subject %>
+    <%= form.text_field :subject %>
+  </div>
+
+  <div class="field">
+    <%= form.label :summary %>
+    <%= form.text_area :summary %>
+  </div>
+
+  <div class="field">
+    <%= form.label :content %>
+    <%= form.text_area :content %>
+  </div>
+
+  <div class="field">
+    <%= form.label :uniquehash %>
+    <%= form.text_field :uniquehash %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rating %>
+    <%= form.number_field :rating %>
+  </div>
+
+  <div class="field">
+    <%= form.label :format %>
+    <%= form.number_field :format %>
+  </div>
+
+  <div class="field">
+    <%= form.label :summaryformat %>
+    <%= form.number_field :summaryformat %>
+  </div>
+
+  <div class="field">
+    <%= form.label :attachment %>
+    <%= form.text_field :attachment %>
+  </div>
+
+  <div class="field">
+    <%= form.label :publishstate %>
+    <%= form.text_field :publishstate %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lastmodified %>
+    <%= form.number_field :lastmodified %>
+  </div>
+
+  <div class="field">
+    <%= form.label :created %>
+    <%= form.number_field :created %>
+  </div>
+
+  <div class="field">
+    <%= form.label :usermodified %>
+    <%= form.number_field :usermodified %>
+  </div>
+
+  <div class="field">
+    <%= form.label :blog_association_id %>
+    <%= form.text_field :blog_association_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

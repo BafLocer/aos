@@ -1,0 +1,2 @@
+class CacheFlag < ApplicationRecord
+end

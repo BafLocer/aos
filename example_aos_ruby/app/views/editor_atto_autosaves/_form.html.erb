@@ -1,0 +1,57 @@
+<%= form_with(model: editor_atto_autosafe, local: true) do |form| %>
+  <% if editor_atto_autosafe.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(editor_atto_autosafe.errors.count, "error") %> prohibited this editor_atto_autosafe from being saved:</h2>
+
+      <ul>
+      <% editor_atto_autosafe.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :elementid %>
+    <%= form.text_field :elementid %>
+  </div>
+
+  <div class="field">
+    <%= form.label :contextid %>
+    <%= form.number_field :contextid %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pagehash %>
+    <%= form.text_field :pagehash %>
+  </div>
+
+  <div class="field">
+    <%= form.label :userid %>
+    <%= form.number_field :userid %>
+  </div>
+
+  <div class="field">
+    <%= form.label :drafttext %>
+    <%= form.text_area :drafttext %>
+  </div>
+
+  <div class="field">
+    <%= form.label :draftid %>
+    <%= form.number_field :draftid %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pageinstance %>
+    <%= form.text_field :pageinstance %>
+  </div>
+
+  <div class="field">
+    <%= form.label :timemodified %>
+    <%= form.number_field :timemodified %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

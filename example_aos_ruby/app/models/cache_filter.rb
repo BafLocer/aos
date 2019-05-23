@@ -1,0 +1,2 @@
+class CacheFilter < ApplicationRecord
+end

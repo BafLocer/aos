@@ -1,0 +1,42 @@
+<%= form_with(model: cache_flag, local: true) do |form| %>
+  <% if cache_flag.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(cache_flag.errors.count, "error") %> prohibited this cache_flag from being saved:</h2>
+
+      <ul>
+      <% cache_flag.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :flagtype %>
+    <%= form.text_field :flagtype %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :timemodified %>
+    <%= form.number_field :timemodified %>
+  </div>
+
+  <div class="field">
+    <%= form.label :value %>
+    <%= form.text_area :value %>
+  </div>
+
+  <div class="field">
+    <%= form.label :expiry %>
+    <%= form.number_field :expiry %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

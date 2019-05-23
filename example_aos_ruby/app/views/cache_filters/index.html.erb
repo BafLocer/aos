@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Cache Filters</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Filter</th>
+      <th>Version</th>
+      <th>Md5key</th>
+      <th>Rawtext</th>
+      <th>Timemodified</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cache_filters.each do |cache_filter| %>
+      <tr>
+        <td><%= cache_filter.filter %></td>
+        <td><%= cache_filter.version %></td>
+        <td><%= cache_filter.md5key %></td>
+        <td><%= cache_filter.rawtext %></td>
+        <td><%= cache_filter.timemodified %></td>
+        <td><%= link_to 'Show', cache_filter %></td>
+        <td><%= link_to 'Edit', edit_cache_filter_path(cache_filter) %></td>
+        <td><%= link_to 'Destroy', cache_filter, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cache Filter', new_cache_filter_path %>

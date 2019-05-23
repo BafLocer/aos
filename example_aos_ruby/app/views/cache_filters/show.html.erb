@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Filter:</strong>
+  <%= @cache_filter.filter %>
+</p>
+
+<p>
+  <strong>Version:</strong>
+  <%= @cache_filter.version %>
+</p>
+
+<p>
+  <strong>Md5key:</strong>
+  <%= @cache_filter.md5key %>
+</p>
+
+<p>
+  <strong>Rawtext:</strong>
+  <%= @cache_filter.rawtext %>
+</p>
+
+<p>
+  <strong>Timemodified:</strong>
+  <%= @cache_filter.timemodified %>
+</p>
+
+<%= link_to 'Edit', edit_cache_filter_path(@cache_filter) %> |
+<%= link_to 'Back', cache_filters_path %>

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Blog Associations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Contextid</th>
+      <th>Blogid</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @blog_associations.each do |blog_association| %>
+      <tr>
+        <td><%= blog_association.contextid %></td>
+        <td><%= blog_association.blogid %></td>
+        <td><%= link_to 'Show', blog_association %></td>
+        <td><%= link_to 'Edit', edit_blog_association_path(blog_association) %></td>
+        <td><%= link_to 'Destroy', blog_association, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Blog Association', new_blog_association_path %>

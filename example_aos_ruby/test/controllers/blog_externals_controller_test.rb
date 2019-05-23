@@ -17,7 +17,7 @@ class BlogExternalsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create blog_external" do
     assert_difference('BlogExternal.count') do
-      post blog_externals_url, params: { blog_external: { description: @blog_external.description, failedlastsync: @blog_external.failedlastsync, filtertags: @blog_external.filtertags, id: @blog_external.id, name: @blog_external.name, timefetched: @blog_external.timefetched, timemodified: @blog_external.timemodified, url: @blog_external.url, userid: @blog_external.userid } }
+      post blog_externals_url, params: { blog_external: { description: @blog_external.description, failedlastsync: @blog_external.failedlastsync, filtertags: @blog_external.filtertags, name: @blog_external.name, timefetched: @blog_external.timefetched, timemodified: @blog_external.timemodified, url: @blog_external.url, userid: @blog_external.userid } }
     end
 
     assert_redirected_to blog_external_url(BlogExternal.last)
@@ -34,7 +34,7 @@ class BlogExternalsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update blog_external" do
-    patch blog_external_url(@blog_external), params: { blog_external: { description: @blog_external.description, failedlastsync: @blog_external.failedlastsync, filtertags: @blog_external.filtertags, id: @blog_external.id, name: @blog_external.name, timefetched: @blog_external.timefetched, timemodified: @blog_external.timemodified, url: @blog_external.url, userid: @blog_external.userid } }
+    patch blog_external_url(@blog_external), params: { blog_external: { description: @blog_external.description, failedlastsync: @blog_external.failedlastsync, filtertags: @blog_external.filtertags, name: @blog_external.name, timefetched: @blog_external.timefetched, timemodified: @blog_external.timemodified, url: @blog_external.url, userid: @blog_external.userid } }
     assert_redirected_to blog_external_url(@blog_external)
   end
 

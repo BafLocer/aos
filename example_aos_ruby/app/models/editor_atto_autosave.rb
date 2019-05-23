@@ -1,0 +1,2 @@
+class EditorAttoAutosave < ApplicationRecord
+end

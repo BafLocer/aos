@@ -1,6 +1,5 @@
 class BlogExternalsController < ApplicationController
   before_action :set_blog_external, only: [:show, :edit, :update, :destroy]
-  
 
   # GET /blog_externals
   # GET /blog_externals.json
@@ -70,6 +69,6 @@ class BlogExternalsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def blog_external_params
-      params.require(:blog_external).permit(:id, :userid, :name, :description, :url, :filtertags, :failedlastsync, :timemodified, :timefetched)
+      params.require(:blog_external).permit(:userid, :name, :description, :url, :filtertags, :failedlastsync, :timemodified, :timefetched)
     end
 end

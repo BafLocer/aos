@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Config Plugins</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Plugin</th>
+      <th>Name</th>
+      <th>Value</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @config_plugins.each do |config_plugin| %>
+      <tr>
+        <td><%= config_plugin.plugin %></td>
+        <td><%= config_plugin.name %></td>
+        <td><%= config_plugin.value %></td>
+        <td><%= link_to 'Show', config_plugin %></td>
+        <td><%= link_to 'Edit', edit_config_plugin_path(config_plugin) %></td>
+        <td><%= link_to 'Destroy', config_plugin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Config Plugin', new_config_plugin_path %>

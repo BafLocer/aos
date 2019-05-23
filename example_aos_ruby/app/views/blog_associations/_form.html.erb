@@ -1,0 +1,27 @@
+<%= form_with(model: blog_association, local: true) do |form| %>
+  <% if blog_association.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(blog_association.errors.count, "error") %> prohibited this blog_association from being saved:</h2>
+
+      <ul>
+      <% blog_association.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :contextid %>
+    <%= form.number_field :contextid %>
+  </div>
+
+  <div class="field">
+    <%= form.label :blogid %>
+    <%= form.number_field :blogid %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Plugin:</strong>
+  <%= @config_plugin.plugin %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @config_plugin.name %>
+</p>
+
+<p>
+  <strong>Value:</strong>
+  <%= @config_plugin.value %>
+</p>
+
+<%= link_to 'Edit', edit_config_plugin_path(@config_plugin) %> |
+<%= link_to 'Back', config_plugins_path %>

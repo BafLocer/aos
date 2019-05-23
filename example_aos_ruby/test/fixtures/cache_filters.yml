@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  filter: MyString
+  version: 1
+  md5key: MyString
+  rawtext: MyText
+  timemodified: 1
+
+two:
+  filter: MyString
+  version: 1
+  md5key: MyString
+  rawtext: MyText
+  timemodified: 1

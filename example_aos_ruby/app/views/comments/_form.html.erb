@@ -1,0 +1,57 @@
+<%= form_with(model: comment, local: true) do |form| %>
+  <% if comment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
+
+      <ul>
+      <% comment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :contextid %>
+    <%= form.number_field :contextid %>
+  </div>
+
+  <div class="field">
+    <%= form.label :component %>
+    <%= form.text_field :component %>
+  </div>
+
+  <div class="field">
+    <%= form.label :commentarea %>
+    <%= form.text_field :commentarea %>
+  </div>
+
+  <div class="field">
+    <%= form.label :itemid %>
+    <%= form.number_field :itemid %>
+  </div>
+
+  <div class="field">
+    <%= form.label :content %>
+    <%= form.text_area :content %>
+  </div>
+
+  <div class="field">
+    <%= form.label :format %>
+    <%= form.number_field :format %>
+  </div>
+
+  <div class="field">
+    <%= form.label :userid %>
+    <%= form.number_field :userid %>
+  </div>
+
+  <div class="field">
+    <%= form.label :timecreated %>
+    <%= form.number_field :timecreated %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

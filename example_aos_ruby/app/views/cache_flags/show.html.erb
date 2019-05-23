@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Flagtype:</strong>
+  <%= @cache_flag.flagtype %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @cache_flag.name %>
+</p>
+
+<p>
+  <strong>Timemodified:</strong>
+  <%= @cache_flag.timemodified %>
+</p>
+
+<p>
+  <strong>Value:</strong>
+  <%= @cache_flag.value %>
+</p>
+
+<p>
+  <strong>Expiry:</strong>
+  <%= @cache_flag.expiry %>
+</p>
+
+<%= link_to 'Edit', edit_cache_flag_path(@cache_flag) %> |
+<%= link_to 'Back', cache_flags_path %>

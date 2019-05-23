@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Userid:</strong>
+  <%= @config_log.userid %>
+</p>
+
+<p>
+  <strong>Timemodified:</strong>
+  <%= @config_log.timemodified %>
+</p>
+
+<p>
+  <strong>Plugin:</strong>
+  <%= @config_log.plugin %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @config_log.name %>
+</p>
+
+<p>
+  <strong>Value:</strong>
+  <%= @config_log.value %>
+</p>
+
+<p>
+  <strong>Oldvalue:</strong>
+  <%= @config_log.oldvalue %>
+</p>
+
+<%= link_to 'Edit', edit_config_log_path(@config_log) %> |
+<%= link_to 'Back', config_logs_path %>

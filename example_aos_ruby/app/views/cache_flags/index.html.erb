@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Cache Flags</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Flagtype</th>
+      <th>Name</th>
+      <th>Timemodified</th>
+      <th>Value</th>
+      <th>Expiry</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cache_flags.each do |cache_flag| %>
+      <tr>
+        <td><%= cache_flag.flagtype %></td>
+        <td><%= cache_flag.name %></td>
+        <td><%= cache_flag.timemodified %></td>
+        <td><%= cache_flag.value %></td>
+        <td><%= cache_flag.expiry %></td>
+        <td><%= link_to 'Show', cache_flag %></td>
+        <td><%= link_to 'Edit', edit_cache_flag_path(cache_flag) %></td>
+        <td><%= link_to 'Destroy', cache_flag, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cache Flag', new_cache_flag_path %>

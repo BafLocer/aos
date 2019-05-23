@@ -1,0 +1,32 @@
+<%= form_with(model: config_plugin, local: true) do |form| %>
+  <% if config_plugin.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(config_plugin.errors.count, "error") %> prohibited this config_plugin from being saved:</h2>
+
+      <ul>
+      <% config_plugin.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :plugin %>
+    <%= form.text_field :plugin %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :value %>
+    <%= form.text_area :value %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

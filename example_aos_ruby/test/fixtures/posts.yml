@@ -1,0 +1,43 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  module: MyString
+  userid: 1
+  courseid: 1
+  groupid: 1
+  moduleid: 1
+  coursemoduleid: 1
+  subject: MyString
+  summary: MyText
+  content: MyText
+  uniquehash: MyString
+  rating: 1
+  format: 1
+  summaryformat: 1
+  attachment: MyString
+  publishstate: MyString
+  lastmodified: 1
+  created: 1
+  usermodified: 1
+  blog_association: one
+
+two:
+  module: MyString
+  userid: 1
+  courseid: 1
+  groupid: 1
+  moduleid: 1
+  coursemoduleid: 1
+  subject: MyString
+  summary: MyText
+  content: MyText
+  uniquehash: MyString
+  rating: 1
+  format: 1
+  summaryformat: 1
+  attachment: MyString
+  publishstate: MyString
+  lastmodified: 1
+  created: 1
+  usermodified: 1
+  blog_association: two

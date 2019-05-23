@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Config Logs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Userid</th>
+      <th>Timemodified</th>
+      <th>Plugin</th>
+      <th>Name</th>
+      <th>Value</th>
+      <th>Oldvalue</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @config_logs.each do |config_log| %>
+      <tr>
+        <td><%= config_log.userid %></td>
+        <td><%= config_log.timemodified %></td>
+        <td><%= config_log.plugin %></td>
+        <td><%= config_log.name %></td>
+        <td><%= config_log.value %></td>
+        <td><%= config_log.oldvalue %></td>
+        <td><%= link_to 'Show', config_log %></td>
+        <td><%= link_to 'Edit', edit_config_log_path(config_log) %></td>
+        <td><%= link_to 'Destroy', config_log, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Config Log', new_config_log_path %>

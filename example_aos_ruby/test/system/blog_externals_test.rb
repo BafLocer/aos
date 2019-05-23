@@ -17,7 +17,6 @@ class BlogExternalsTest < ApplicationSystemTestCase
     fill_in "Description", with: @blog_external.description
     fill_in "Failedlastsync", with: @blog_external.failedlastsync
     fill_in "Filtertags", with: @blog_external.filtertags
-    fill_in "Id", with: @blog_external.id
     fill_in "Name", with: @blog_external.name
     fill_in "Timefetched", with: @blog_external.timefetched
     fill_in "Timemodified", with: @blog_external.timemodified
@@ -36,7 +35,6 @@ class BlogExternalsTest < ApplicationSystemTestCase
     fill_in "Description", with: @blog_external.description
     fill_in "Failedlastsync", with: @blog_external.failedlastsync
     fill_in "Filtertags", with: @blog_external.filtertags
-    fill_in "Id", with: @blog_external.id
     fill_in "Name", with: @blog_external.name
     fill_in "Timefetched", with: @blog_external.timefetched
     fill_in "Timemodified", with: @blog_external.timemodified

@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Contextid:</strong>
+  <%= @comment.contextid %>
+</p>
+
+<p>
+  <strong>Component:</strong>
+  <%= @comment.component %>
+</p>
+
+<p>
+  <strong>Commentarea:</strong>
+  <%= @comment.commentarea %>
+</p>
+
+<p>
+  <strong>Itemid:</strong>
+  <%= @comment.itemid %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @comment.content %>
+</p>
+
+<p>
+  <strong>Format:</strong>
+  <%= @comment.format %>
+</p>
+
+<p>
+  <strong>Userid:</strong>
+  <%= @comment.userid %>
+</p>
+
+<p>
+  <strong>Timecreated:</strong>
+  <%= @comment.timecreated %>
+</p>
+
+<%= link_to 'Edit', edit_comment_path(@comment) %> |
+<%= link_to 'Back', comments_path %>

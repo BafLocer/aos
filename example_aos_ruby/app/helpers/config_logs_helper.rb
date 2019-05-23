@@ -1,0 +1,2 @@
+module ConfigLogsHelper
+end

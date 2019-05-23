@@ -1,3 +1,4 @@
 class BlogExternal < ApplicationRecord
-  self.primary_key = :id
+  validates :name, length: {maximum: 255}, presence: true
+  validates :filtertags, length: {maximum: 255}, presense: true
 end

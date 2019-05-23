@@ -1,0 +1,2 @@
+module ConfigPluginsHelper
+end
