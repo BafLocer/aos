@@ -1,0 +1,37 @@
+<%= form_with(model: analytics_prediction_action, local: true) do |form| %>
+  <% if analytics_prediction_action.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(analytics_prediction_action.errors.count, "error") %> prohibited this analytics_prediction_action from being saved:</h2>
+
+      <ul>
+      <% analytics_prediction_action.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :predictionid %>
+    <%= form.text_field :predictionid %>
+  </div>
+
+  <div class="field">
+    <%= form.label :userid %>
+    <%= form.text_field :userid %>
+  </div>
+
+  <div class="field">
+    <%= form.label :actionname %>
+    <%= form.text_field :actionname %>
+  </div>
+
+  <div class="field">
+    <%= form.label :timecreated %>
+    <%= form.text_field :timecreated %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,57 @@
+<%= form_with(model: analytics_indicator_calc, local: true) do |form| %>
+  <% if analytics_indicator_calc.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(analytics_indicator_calc.errors.count, "error") %> prohibited this analytics_indicator_calc from being saved:</h2>
+
+      <ul>
+      <% analytics_indicator_calc.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :starttime %>
+    <%= form.number_field :starttime %>
+  </div>
+
+  <div class="field">
+    <%= form.label :endtime %>
+    <%= form.number_field :endtime %>
+  </div>
+
+  <div class="field">
+    <%= form.label :contextid %>
+    <%= form.number_field :contextid %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sampleorign %>
+    <%= form.text_field :sampleorign %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sampleid %>
+    <%= form.number_field :sampleid %>
+  </div>
+
+  <div class="field">
+    <%= form.label :indicator %>
+    <%= form.text_field :indicator %>
+  </div>
+
+  <div class="field">
+    <%= form.label :value %>
+    <%= form.text_field :value %>
+  </div>
+
+  <div class="field">
+    <%= form.label :timecreated %>
+    <%= form.number_field :timecreated %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

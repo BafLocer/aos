@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Analytics Train Samples</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Modelid</th>
+      <th>Analysableid</th>
+      <th>Timespliting</th>
+      <th>Fileid</th>
+      <th>Sampleids</th>
+      <th>Timecreated</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @analytics_train_samples.each do |analytics_train_sample| %>
+      <tr>
+        <td><%= analytics_train_sample.modelid %></td>
+        <td><%= analytics_train_sample.analysableid %></td>
+        <td><%= analytics_train_sample.timespliting %></td>
+        <td><%= analytics_train_sample.fileid %></td>
+        <td><%= analytics_train_sample.sampleids %></td>
+        <td><%= analytics_train_sample.timecreated %></td>
+        <td><%= link_to 'Show', analytics_train_sample %></td>
+        <td><%= link_to 'Edit', edit_analytics_train_sample_path(analytics_train_sample) %></td>
+        <td><%= link_to 'Destroy', analytics_train_sample, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Analytics Train Sample', new_analytics_train_sample_path %>

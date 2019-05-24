@@ -1,0 +1,2 @@
+class AnalyticsPredictSample < ApplicationRecord
+end

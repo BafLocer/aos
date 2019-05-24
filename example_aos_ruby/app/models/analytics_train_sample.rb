@@ -1,0 +1,2 @@
+class AnalyticsTrainSample < ApplicationRecord
+end

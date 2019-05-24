@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Modelid:</strong>
+  <%= @analytics_train_sample.modelid %>
+</p>
+
+<p>
+  <strong>Analysableid:</strong>
+  <%= @analytics_train_sample.analysableid %>
+</p>
+
+<p>
+  <strong>Timespliting:</strong>
+  <%= @analytics_train_sample.timespliting %>
+</p>
+
+<p>
+  <strong>Fileid:</strong>
+  <%= @analytics_train_sample.fileid %>
+</p>
+
+<p>
+  <strong>Sampleids:</strong>
+  <%= @analytics_train_sample.sampleids %>
+</p>
+
+<p>
+  <strong>Timecreated:</strong>
+  <%= @analytics_train_sample.timecreated %>
+</p>
+
+<%= link_to 'Edit', edit_analytics_train_sample_path(@analytics_train_sample) %> |
+<%= link_to 'Back', analytics_train_samples_path %>

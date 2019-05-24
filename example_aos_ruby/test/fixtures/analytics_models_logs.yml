@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  modelid: 
+  version: 
+  target: MyString
+  indicators: MyText
+  timespliting: MyString
+  score: 
+  info: MyText
+  dir: MyText
+  timecreated: 
+  usermodified: 
+
+two:
+  modelid: 
+  version: 
+  target: MyString
+  indicators: MyText
+  timespliting: MyString
+  score: 
+  info: MyText
+  dir: MyText
+  timecreated: 
+  usermodified: 

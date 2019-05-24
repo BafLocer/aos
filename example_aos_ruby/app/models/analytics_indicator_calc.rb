@@ -1,0 +1,2 @@
+class AnalyticsIndicatorCalc < ApplicationRecord
+end

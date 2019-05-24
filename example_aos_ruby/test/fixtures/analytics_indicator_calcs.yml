@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  starttime: 1
+  endtime: 1
+  contextid: 1
+  sampleorign: MyString
+  sampleid: 1
+  indicator: MyString
+  value: 
+  timecreated: 1
+
+two:
+  starttime: 1
+  endtime: 1
+  contextid: 1
+  sampleorign: MyString
+  sampleid: 1
+  indicator: MyString
+  value: 
+  timecreated: 1

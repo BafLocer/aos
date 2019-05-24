@@ -1,0 +1,2 @@
+module AnalyticsPredictSamplesHelper
+end

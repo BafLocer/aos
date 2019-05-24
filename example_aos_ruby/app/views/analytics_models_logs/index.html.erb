@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Analytics Models Logs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Modelid</th>
+      <th>Version</th>
+      <th>Target</th>
+      <th>Indicators</th>
+      <th>Timespliting</th>
+      <th>Score</th>
+      <th>Info</th>
+      <th>Dir</th>
+      <th>Timecreated</th>
+      <th>Usermodified</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @analytics_models_logs.each do |analytics_models_log| %>
+      <tr>
+        <td><%= analytics_models_log.modelid %></td>
+        <td><%= analytics_models_log.version %></td>
+        <td><%= analytics_models_log.target %></td>
+        <td><%= analytics_models_log.indicators %></td>
+        <td><%= analytics_models_log.timespliting %></td>
+        <td><%= analytics_models_log.score %></td>
+        <td><%= analytics_models_log.info %></td>
+        <td><%= analytics_models_log.dir %></td>
+        <td><%= analytics_models_log.timecreated %></td>
+        <td><%= analytics_models_log.usermodified %></td>
+        <td><%= link_to 'Show', analytics_models_log %></td>
+        <td><%= link_to 'Edit', edit_analytics_models_log_path(analytics_models_log) %></td>
+        <td><%= link_to 'Destroy', analytics_models_log, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Analytics Models Log', new_analytics_models_log_path %>

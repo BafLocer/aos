@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Analytics Indicator Calcs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Starttime</th>
+      <th>Endtime</th>
+      <th>Contextid</th>
+      <th>Sampleorign</th>
+      <th>Sampleid</th>
+      <th>Indicator</th>
+      <th>Value</th>
+      <th>Timecreated</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @analytics_indicator_calcs.each do |analytics_indicator_calc| %>
+      <tr>
+        <td><%= analytics_indicator_calc.starttime %></td>
+        <td><%= analytics_indicator_calc.endtime %></td>
+        <td><%= analytics_indicator_calc.contextid %></td>
+        <td><%= analytics_indicator_calc.sampleorign %></td>
+        <td><%= analytics_indicator_calc.sampleid %></td>
+        <td><%= analytics_indicator_calc.indicator %></td>
+        <td><%= analytics_indicator_calc.value %></td>
+        <td><%= analytics_indicator_calc.timecreated %></td>
+        <td><%= link_to 'Show', analytics_indicator_calc %></td>
+        <td><%= link_to 'Edit', edit_analytics_indicator_calc_path(analytics_indicator_calc) %></td>
+        <td><%= link_to 'Destroy', analytics_indicator_calc, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Analytics Indicator Calc', new_analytics_indicator_calc_path %>

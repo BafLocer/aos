@@ -1,0 +1,67 @@
+<%= form_with(model: analytics_models_log, local: true) do |form| %>
+  <% if analytics_models_log.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(analytics_models_log.errors.count, "error") %> prohibited this analytics_models_log from being saved:</h2>
+
+      <ul>
+      <% analytics_models_log.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :modelid %>
+    <%= form.text_field :modelid %>
+  </div>
+
+  <div class="field">
+    <%= form.label :version %>
+    <%= form.text_field :version %>
+  </div>
+
+  <div class="field">
+    <%= form.label :target %>
+    <%= form.text_field :target %>
+  </div>
+
+  <div class="field">
+    <%= form.label :indicators %>
+    <%= form.text_area :indicators %>
+  </div>
+
+  <div class="field">
+    <%= form.label :timespliting %>
+    <%= form.text_field :timespliting %>
+  </div>
+
+  <div class="field">
+    <%= form.label :score %>
+    <%= form.text_field :score %>
+  </div>
+
+  <div class="field">
+    <%= form.label :info %>
+    <%= form.text_area :info %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dir %>
+    <%= form.text_area :dir %>
+  </div>
+
+  <div class="field">
+    <%= form.label :timecreated %>
+    <%= form.text_field :timecreated %>
+  </div>
+
+  <div class="field">
+    <%= form.label :usermodified %>
+    <%= form.text_field :usermodified %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

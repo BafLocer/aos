@@ -1,0 +1,52 @@
+<%= form_with(model: analytics_predict_sample, local: true) do |form| %>
+  <% if analytics_predict_sample.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(analytics_predict_sample.errors.count, "error") %> prohibited this analytics_predict_sample from being saved:</h2>
+
+      <ul>
+      <% analytics_predict_sample.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :modelid %>
+    <%= form.text_field :modelid %>
+  </div>
+
+  <div class="field">
+    <%= form.label :analysableid %>
+    <%= form.text_field :analysableid %>
+  </div>
+
+  <div class="field">
+    <%= form.label :timespliting %>
+    <%= form.text_field :timespliting %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rangeindex %>
+    <%= form.text_field :rangeindex %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sampleids %>
+    <%= form.text_area :sampleids %>
+  </div>
+
+  <div class="field">
+    <%= form.label :timecreated %>
+    <%= form.text_field :timecreated %>
+  </div>
+
+  <div class="field">
+    <%= form.label :timemodified %>
+    <%= form.text_field :timemodified %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

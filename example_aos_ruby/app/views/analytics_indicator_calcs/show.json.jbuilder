@@ -1,0 +1,1 @@
+json.partial! "analytics_indicator_calcs/analytics_indicator_calc", analytics_indicator_calc: @analytics_indicator_calc

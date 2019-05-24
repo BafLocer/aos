@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Predictionid:</strong>
+  <%= @analytics_prediction_action.predictionid %>
+</p>
+
+<p>
+  <strong>Userid:</strong>
+  <%= @analytics_prediction_action.userid %>
+</p>
+
+<p>
+  <strong>Actionname:</strong>
+  <%= @analytics_prediction_action.actionname %>
+</p>
+
+<p>
+  <strong>Timecreated:</strong>
+  <%= @analytics_prediction_action.timecreated %>
+</p>
+
+<%= link_to 'Edit', edit_analytics_prediction_action_path(@analytics_prediction_action) %> |
+<%= link_to 'Back', analytics_prediction_actions_path %>

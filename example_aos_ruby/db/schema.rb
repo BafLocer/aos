@@ -10,10 +10,70 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_23_171819) do
+ActiveRecord::Schema.define(version: 2019_05_24_164808) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "analytics_indicator_calcs", force: :cascade do |t|
+    t.integer "starttime"
+    t.integer "endtime"
+    t.integer "contextid"
+    t.string "sampleorign"
+    t.integer "sampleid"
+    t.string "indicator"
+    t.decimal "value"
+    t.integer "timecreated"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "analytics_models_logs", force: :cascade do |t|
+    t.bigint "modelid"
+    t.bigint "version"
+    t.string "target"
+    t.text "indicators"
+    t.string "timespliting"
+    t.decimal "score"
+    t.text "info"
+    t.text "dir"
+    t.bigint "timecreated"
+    t.bigint "usermodified"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "analytics_predict_samples", force: :cascade do |t|
+    t.bigint "modelid"
+    t.bigint "analysableid"
+    t.string "timespliting"
+    t.bigint "rangeindex"
+    t.text "sampleids"
+    t.bigint "timecreated"
+    t.bigint "timemodified"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "analytics_prediction_actions", force: :cascade do |t|
+    t.bigint "predictionid"
+    t.bigint "userid"
+    t.string "actionname"
+    t.bigint "timecreated"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "analytics_train_samples", force: :cascade do |t|
+    t.bigint "modelid"
+    t.bigint "analysableid"
+    t.string "timespliting"
+    t.bigint "fileid"
+    t.text "sampleids"
+    t.bigint "timecreated"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "blog_associations", force: :cascade do |t|
     t.integer "contextid"

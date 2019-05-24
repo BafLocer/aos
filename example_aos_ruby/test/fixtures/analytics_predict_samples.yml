@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  modelid: 
+  analysableid: 
+  timespliting: MyString
+  rangeindex: 
+  sampleids: MyText
+  timecreated: 
+  timemodified: 
+
+two:
+  modelid: 
+  analysableid: 
+  timespliting: MyString
+  rangeindex: 
+  sampleids: MyText
+  timecreated: 
+  timemodified: 

@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :analytics_train_samples
+  resources :analytics_prediction_actions
+  resources :analytics_predict_samples
+  resources :analytics_models_logs
+  resources :analytics_indicator_calcs
   resources :editor_atto_autosaves
   resources :config_plugins
   resources :configs

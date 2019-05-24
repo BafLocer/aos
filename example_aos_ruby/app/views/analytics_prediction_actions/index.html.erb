@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Analytics Prediction Actions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Predictionid</th>
+      <th>Userid</th>
+      <th>Actionname</th>
+      <th>Timecreated</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @analytics_prediction_actions.each do |analytics_prediction_action| %>
+      <tr>
+        <td><%= analytics_prediction_action.predictionid %></td>
+        <td><%= analytics_prediction_action.userid %></td>
+        <td><%= analytics_prediction_action.actionname %></td>
+        <td><%= analytics_prediction_action.timecreated %></td>
+        <td><%= link_to 'Show', analytics_prediction_action %></td>
+        <td><%= link_to 'Edit', edit_analytics_prediction_action_path(analytics_prediction_action) %></td>
+        <td><%= link_to 'Destroy', analytics_prediction_action, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Analytics Prediction Action', new_analytics_prediction_action_path %>

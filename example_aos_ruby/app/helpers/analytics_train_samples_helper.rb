@@ -1,0 +1,2 @@
+module AnalyticsTrainSamplesHelper
+end

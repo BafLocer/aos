@@ -1,0 +1,2 @@
+class AnalyticsModelsLog < ApplicationRecord
+end

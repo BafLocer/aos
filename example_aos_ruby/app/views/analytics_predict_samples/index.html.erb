@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Analytics Predict Samples</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Modelid</th>
+      <th>Analysableid</th>
+      <th>Timespliting</th>
+      <th>Rangeindex</th>
+      <th>Sampleids</th>
+      <th>Timecreated</th>
+      <th>Timemodified</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @analytics_predict_samples.each do |analytics_predict_sample| %>
+      <tr>
+        <td><%= analytics_predict_sample.modelid %></td>
+        <td><%= analytics_predict_sample.analysableid %></td>
+        <td><%= analytics_predict_sample.timespliting %></td>
+        <td><%= analytics_predict_sample.rangeindex %></td>
+        <td><%= analytics_predict_sample.sampleids %></td>
+        <td><%= analytics_predict_sample.timecreated %></td>
+        <td><%= analytics_predict_sample.timemodified %></td>
+        <td><%= link_to 'Show', analytics_predict_sample %></td>
+        <td><%= link_to 'Edit', edit_analytics_predict_sample_path(analytics_predict_sample) %></td>
+        <td><%= link_to 'Destroy', analytics_predict_sample, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Analytics Predict Sample', new_analytics_predict_sample_path %>

@@ -1,0 +1,2 @@
+class AnalyticsPredictionAction < ApplicationRecord
+end
