@@ -1,0 +1,2 @@
+class AnalyticsUsedFile < ApplicationRecord
+end

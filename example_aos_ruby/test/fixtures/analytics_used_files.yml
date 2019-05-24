@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  modelid: 
+  fileid: 
+  action: MyString
+  time: 
+
+two:
+  modelid: 
+  fileid: 
+  action: MyString
+  time: 

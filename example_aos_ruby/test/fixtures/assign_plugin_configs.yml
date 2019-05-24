@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  assignment: 
+  plugin: MyString
+  subtype: MyString
+  name: MyString
+  value: MyText
+
+two:
+  assignment: 
+  plugin: MyString
+  subtype: MyString
+  name: MyString
+  value: MyText

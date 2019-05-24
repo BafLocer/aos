@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Modelid:</strong>
+  <%= @analytics_used_file.modelid %>
+</p>
+
+<p>
+  <strong>Fileid:</strong>
+  <%= @analytics_used_file.fileid %>
+</p>
+
+<p>
+  <strong>Action:</strong>
+  <%= @analytics_used_file.action %>
+</p>
+
+<p>
+  <strong>Time:</strong>
+  <%= @analytics_used_file.time %>
+</p>
+
+<%= link_to 'Edit', edit_analytics_used_file_path(@analytics_used_file) %> |
+<%= link_to 'Back', analytics_used_files_path %>

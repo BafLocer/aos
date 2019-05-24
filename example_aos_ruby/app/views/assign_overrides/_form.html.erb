@@ -1,0 +1,52 @@
+<%= form_with(model: assign_override, local: true) do |form| %>
+  <% if assign_override.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(assign_override.errors.count, "error") %> prohibited this assign_override from being saved:</h2>
+
+      <ul>
+      <% assign_override.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :assignid %>
+    <%= form.text_field :assignid %>
+  </div>
+
+  <div class="field">
+    <%= form.label :groupid %>
+    <%= form.text_field :groupid %>
+  </div>
+
+  <div class="field">
+    <%= form.label :userid %>
+    <%= form.text_field :userid %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sortorder %>
+    <%= form.text_field :sortorder %>
+  </div>
+
+  <div class="field">
+    <%= form.label :allowsubmissionsfromdate %>
+    <%= form.text_field :allowsubmissionsfromdate %>
+  </div>
+
+  <div class="field">
+    <%= form.label :duedate %>
+    <%= form.text_field :duedate %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cutoffdate %>
+    <%= form.text_field :cutoffdate %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

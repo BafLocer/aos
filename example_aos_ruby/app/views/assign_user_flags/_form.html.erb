@@ -1,0 +1,52 @@
+<%= form_with(model: assign_user_flag, local: true) do |form| %>
+  <% if assign_user_flag.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(assign_user_flag.errors.count, "error") %> prohibited this assign_user_flag from being saved:</h2>
+
+      <ul>
+      <% assign_user_flag.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :userid %>
+    <%= form.text_field :userid %>
+  </div>
+
+  <div class="field">
+    <%= form.label :assignment %>
+    <%= form.text_field :assignment %>
+  </div>
+
+  <div class="field">
+    <%= form.label :locked %>
+    <%= form.text_field :locked %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mailed %>
+    <%= form.text_field :mailed %>
+  </div>
+
+  <div class="field">
+    <%= form.label :extensionduedate %>
+    <%= form.text_field :extensionduedate %>
+  </div>
+
+  <div class="field">
+    <%= form.label :workflowstate %>
+    <%= form.text_field :workflowstate %>
+  </div>
+
+  <div class="field">
+    <%= form.label :allocatedmarker %>
+    <%= form.text_field :allocatedmarker %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

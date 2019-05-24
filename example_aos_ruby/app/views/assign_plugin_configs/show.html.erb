@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Assignment:</strong>
+  <%= @assign_plugin_config.assignment %>
+</p>
+
+<p>
+  <strong>Plugin:</strong>
+  <%= @assign_plugin_config.plugin %>
+</p>
+
+<p>
+  <strong>Subtype:</strong>
+  <%= @assign_plugin_config.subtype %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @assign_plugin_config.name %>
+</p>
+
+<p>
+  <strong>Value:</strong>
+  <%= @assign_plugin_config.value %>
+</p>
+
+<%= link_to 'Edit', edit_assign_plugin_config_path(@assign_plugin_config) %> |
+<%= link_to 'Back', assign_plugin_configs_path %>

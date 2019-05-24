@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Assignid:</strong>
+  <%= @assign_override.assignid %>
+</p>
+
+<p>
+  <strong>Groupid:</strong>
+  <%= @assign_override.groupid %>
+</p>
+
+<p>
+  <strong>Userid:</strong>
+  <%= @assign_override.userid %>
+</p>
+
+<p>
+  <strong>Sortorder:</strong>
+  <%= @assign_override.sortorder %>
+</p>
+
+<p>
+  <strong>Allowsubmissionsfromdate:</strong>
+  <%= @assign_override.allowsubmissionsfromdate %>
+</p>
+
+<p>
+  <strong>Duedate:</strong>
+  <%= @assign_override.duedate %>
+</p>
+
+<p>
+  <strong>Cutoffdate:</strong>
+  <%= @assign_override.cutoffdate %>
+</p>
+
+<%= link_to 'Edit', edit_assign_override_path(@assign_override) %> |
+<%= link_to 'Back', assign_overrides_path %>

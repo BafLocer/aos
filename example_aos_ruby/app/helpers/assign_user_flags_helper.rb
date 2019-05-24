@@ -1,0 +1,2 @@
+module AssignUserFlagsHelper
+end

@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Analytics Used Analysables</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Modelid</th>
+      <th>Action</th>
+      <th>Analysableid</th>
+      <th>Timeanalysed</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @analytics_used_analysables.each do |analytics_used_analysable| %>
+      <tr>
+        <td><%= analytics_used_analysable.modelid %></td>
+        <td><%= analytics_used_analysable.action %></td>
+        <td><%= analytics_used_analysable.analysableid %></td>
+        <td><%= analytics_used_analysable.timeanalysed %></td>
+        <td><%= link_to 'Show', analytics_used_analysable %></td>
+        <td><%= link_to 'Edit', edit_analytics_used_analysable_path(analytics_used_analysable) %></td>
+        <td><%= link_to 'Destroy', analytics_used_analysable, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Analytics Used Analysable', new_analytics_used_analysable_path %>

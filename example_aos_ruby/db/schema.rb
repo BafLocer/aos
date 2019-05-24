@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_24_164808) do
+ActiveRecord::Schema.define(version: 2019_05_24_170602) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -71,6 +71,58 @@ ActiveRecord::Schema.define(version: 2019_05_24_164808) do
     t.bigint "fileid"
     t.text "sampleids"
     t.bigint "timecreated"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "analytics_used_analysables", force: :cascade do |t|
+    t.bigint "modelid"
+    t.string "action"
+    t.bigint "analysableid"
+    t.bigint "timeanalysed"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "analytics_used_files", force: :cascade do |t|
+    t.bigint "modelid"
+    t.bigint "fileid"
+    t.string "action"
+    t.bigint "time"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "assign_overrides", force: :cascade do |t|
+    t.bigint "assignid"
+    t.bigint "groupid"
+    t.bigint "userid"
+    t.bigint "sortorder"
+    t.bigint "allowsubmissionsfromdate"
+    t.bigint "duedate"
+    t.bigint "cutoffdate"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "assign_plugin_configs", force: :cascade do |t|
+    t.bigint "assignment"
+    t.string "plugin"
+    t.string "subtype"
+    t.string "name"
+    t.text "value"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "assign_user_flags", force: :cascade do |t|
+    t.bigint "userid"
+    t.bigint "assignment"
+    t.bigint "locked"
+    t.integer "mailed"
+    t.bigint "extensionduedate"
+    t.string "workflowstate"
+    t.bigint "allocatedmarker"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

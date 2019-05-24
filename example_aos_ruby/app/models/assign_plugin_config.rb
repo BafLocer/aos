@@ -1,0 +1,2 @@
+class AssignPluginConfig < ApplicationRecord
+end

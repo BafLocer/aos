@@ -1,0 +1,2 @@
+class AssignOverride < ApplicationRecord
+end

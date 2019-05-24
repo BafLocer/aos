@@ -1,0 +1,2 @@
+class AnalyticsUsedAnalysable < ApplicationRecord
+end

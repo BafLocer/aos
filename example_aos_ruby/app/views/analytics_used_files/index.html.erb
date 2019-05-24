@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Analytics Used Files</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Modelid</th>
+      <th>Fileid</th>
+      <th>Action</th>
+      <th>Time</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @analytics_used_files.each do |analytics_used_file| %>
+      <tr>
+        <td><%= analytics_used_file.modelid %></td>
+        <td><%= analytics_used_file.fileid %></td>
+        <td><%= analytics_used_file.action %></td>
+        <td><%= analytics_used_file.time %></td>
+        <td><%= link_to 'Show', analytics_used_file %></td>
+        <td><%= link_to 'Edit', edit_analytics_used_file_path(analytics_used_file) %></td>
+        <td><%= link_to 'Destroy', analytics_used_file, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Analytics Used File', new_analytics_used_file_path %>

@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  assignid: 
+  groupid: 
+  userid: 
+  sortorder: 
+  allowsubmissionsfromdate: 
+  duedate: 
+  cutoffdate: 
+
+two:
+  assignid: 
+  groupid: 
+  userid: 
+  sortorder: 
+  allowsubmissionsfromdate: 
+  duedate: 
+  cutoffdate: 

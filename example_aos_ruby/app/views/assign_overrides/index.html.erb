@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Assign Overrides</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Assignid</th>
+      <th>Groupid</th>
+      <th>Userid</th>
+      <th>Sortorder</th>
+      <th>Allowsubmissionsfromdate</th>
+      <th>Duedate</th>
+      <th>Cutoffdate</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @assign_overrides.each do |assign_override| %>
+      <tr>
+        <td><%= assign_override.assignid %></td>
+        <td><%= assign_override.groupid %></td>
+        <td><%= assign_override.userid %></td>
+        <td><%= assign_override.sortorder %></td>
+        <td><%= assign_override.allowsubmissionsfromdate %></td>
+        <td><%= assign_override.duedate %></td>
+        <td><%= assign_override.cutoffdate %></td>
+        <td><%= link_to 'Show', assign_override %></td>
+        <td><%= link_to 'Edit', edit_assign_override_path(assign_override) %></td>
+        <td><%= link_to 'Destroy', assign_override, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Assign Override', new_assign_override_path %>

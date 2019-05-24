@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :assign_user_flags
+  resources :assign_plugin_configs
+  resources :assign_overrides
+  resources :analytics_used_files
+  resources :analytics_used_analysables
   resources :analytics_train_samples
   resources :analytics_prediction_actions
   resources :analytics_predict_samples

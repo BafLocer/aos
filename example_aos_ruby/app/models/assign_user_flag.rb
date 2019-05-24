@@ -1,0 +1,2 @@
+class AssignUserFlag < ApplicationRecord
+end

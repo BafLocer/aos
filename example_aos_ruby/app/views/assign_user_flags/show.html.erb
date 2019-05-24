@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Userid:</strong>
+  <%= @assign_user_flag.userid %>
+</p>
+
+<p>
+  <strong>Assignment:</strong>
+  <%= @assign_user_flag.assignment %>
+</p>
+
+<p>
+  <strong>Locked:</strong>
+  <%= @assign_user_flag.locked %>
+</p>
+
+<p>
+  <strong>Mailed:</strong>
+  <%= @assign_user_flag.mailed %>
+</p>
+
+<p>
+  <strong>Extensionduedate:</strong>
+  <%= @assign_user_flag.extensionduedate %>
+</p>
+
+<p>
+  <strong>Workflowstate:</strong>
+  <%= @assign_user_flag.workflowstate %>
+</p>
+
+<p>
+  <strong>Allocatedmarker:</strong>
+  <%= @assign_user_flag.allocatedmarker %>
+</p>
+
+<%= link_to 'Edit', edit_assign_user_flag_path(@assign_user_flag) %> |
+<%= link_to 'Back', assign_user_flags_path %>
