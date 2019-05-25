@@ -1,11 +1,11 @@
 class CreateAssignsubmissionFiles < ActiveRecord::Migration[5.2]
   def change
     create_table :assignsubmission_files do |t|
-      t.bigint :assignment
-      t.bigint :submission
-      t.bigint :numfiles
+      t.integer :assignment, :limit => 8, null: false
+      t.integer :submission, :limit => 8, null: false
+      t.integer :numfiles, :limit => 8, null: false
 
-      t.timestamps
+      t.timestamps null: false
     end
   end
 end

@@ -1,12 +1,12 @@
 class CreateAnalyticsUsedAnalysables < ActiveRecord::Migration[5.2]
   def change
     create_table :analytics_used_analysables do |t|
-      t.bigint :modelid
-      t.string :action
-      t.bigint :analysableid
-      t.bigint :timeanalysed
+      t.integer :modelid, :limit => 8, null: false
+      t.string :action, null: false
+      t.integer :analysableid, :limit => 8, null: false
+      t.integer :timeanalysed, :limit => 8, null: false
 
-      t.timestamps
+      t.timestamps null: false
     end
   end
 end

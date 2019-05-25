@@ -1,15 +1,15 @@
 class CreateAssignOverrides < ActiveRecord::Migration[5.2]
   def change
     create_table :assign_overrides do |t|
-      t.bigint :assignid
-      t.bigint :groupid
-      t.bigint :userid
-      t.bigint :sortorder
-      t.bigint :allowsubmissionsfromdate
-      t.bigint :duedate
-      t.bigint :cutoffdate
+      t.integer :assignid, :limit => 8, null: false
+      t.integer :groupid, :limit => 8
+      t.integer :userid, :limit => 8
+      t.integer :sortorder, :limit => 8
+      t.integer :allowsubmissionsfromdate, :limit => 8
+      t.integer :duedate, :limit => 8
+      t.integer :cutoffdate, :limit => 8
 
-      t.timestamps
+      t.timestamps null: false
     end
   end
 end

@@ -1,18 +1,18 @@
 class CreateAnalyticsModelsLogs < ActiveRecord::Migration[5.2]
   def change
     create_table :analytics_models_logs do |t|
-      t.bigint :modelid
-      t.bigint :version
-      t.string :target
-      t.text :indicators
+      t.integer :modelid, :limit => 8, null: false
+      t.integer :version, :limit => 8, null: false
+      t.string :target, null: false
+      t.text :indicators, null: false
       t.string :timespliting
-      t.numeric :score
+      t.integer :score, null: false
       t.text :info
-      t.text :dir
-      t.bigint :timecreated
-      t.bigint :usermodified
+      t.text :dir, null: false
+      t.integer :timecreated, :limit => 8, null: false
+      t.integer :usermodified, :limit => 8, null: false
 
-      t.timestamps
+      t.timestamps null: false
     end
   end
 end

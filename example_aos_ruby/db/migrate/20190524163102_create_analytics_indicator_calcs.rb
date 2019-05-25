@@ -1,16 +1,16 @@
 class CreateAnalyticsIndicatorCalcs < ActiveRecord::Migration[5.2]
   def change
     create_table :analytics_indicator_calcs do |t|
-      t.integer :starttime
-      t.integer :endtime
-      t.integer :contextid
-      t.string :sampleorign
-      t.integer :sampleid
-      t.string :indicator
-      t.numeric :value
-      t.integer :timecreated
+      t.integer :starttime, :limit => 8, null: false
+      t.integer :endtime, :limit => 8, null: false
+      t.integer :contextid, :limit => 8, null: false
+      t.string :sampleorign, null: false
+      t.integer :sampleid, :limit => 8, null: false
+      t.string :indicator, null: false
+      t.integer :value
+      t.integer :timecreated, :limit => 8, null: false
 
-      t.timestamps
+      t.timestamps null: false
     end
   end
 end
