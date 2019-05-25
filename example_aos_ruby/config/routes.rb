@@ -32,5 +32,6 @@ Rails.application.routes.draw do
   resources :blog_externals
   get 'welcome/index', as: :welcome
   get 'welcome/insufficient_privileges', as: :ip
+  root 'welcome#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
