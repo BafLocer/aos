@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Assignment:</strong>
+  <%= @assignfeedback_comment.assignment %>
+</p>
+
+<p>
+  <strong>Grade:</strong>
+  <%= @assignfeedback_comment.grade %>
+</p>
+
+<p>
+  <strong>Commenttext:</strong>
+  <%= @assignfeedback_comment.commenttext %>
+</p>
+
+<p>
+  <strong>Commentformat:</strong>
+  <%= @assignfeedback_comment.commentformat %>
+</p>
+
+<%= link_to 'Edit', edit_assignfeedback_comment_path(@assignfeedback_comment) %> |
+<%= link_to 'Back', assignfeedback_comments_path %>

@@ -1,0 +1,2 @@
+class AssignfeedbackEditpdfQuick < ApplicationRecord
+end

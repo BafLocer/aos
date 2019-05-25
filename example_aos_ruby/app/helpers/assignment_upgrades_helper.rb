@@ -1,0 +1,2 @@
+module AssignmentUpgradesHelper
+end

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Assignment:</strong>
+  <%= @assignfeedback_file.assignment %>
+</p>
+
+<p>
+  <strong>Grade:</strong>
+  <%= @assignfeedback_file.grade %>
+</p>
+
+<p>
+  <strong>Numfiles:</strong>
+  <%= @assignfeedback_file.numfiles %>
+</p>
+
+<%= link_to 'Edit', edit_assignfeedback_file_path(@assignfeedback_file) %> |
+<%= link_to 'Back', assignfeedback_files_path %>

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Assignment:</strong>
+  <%= @assign_user_mapping.assignment %>
+</p>
+
+<p>
+  <strong>Userid:</strong>
+  <%= @assign_user_mapping.userid %>
+</p>
+
+<%= link_to 'Edit', edit_assign_user_mapping_path(@assign_user_mapping) %> |
+<%= link_to 'Back', assign_user_mappings_path %>

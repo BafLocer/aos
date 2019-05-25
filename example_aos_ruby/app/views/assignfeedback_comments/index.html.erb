@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Assignfeedback Comments</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Assignment</th>
+      <th>Grade</th>
+      <th>Commenttext</th>
+      <th>Commentformat</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @assignfeedback_comments.each do |assignfeedback_comment| %>
+      <tr>
+        <td><%= assignfeedback_comment.assignment %></td>
+        <td><%= assignfeedback_comment.grade %></td>
+        <td><%= assignfeedback_comment.commenttext %></td>
+        <td><%= assignfeedback_comment.commentformat %></td>
+        <td><%= link_to 'Show', assignfeedback_comment %></td>
+        <td><%= link_to 'Edit', edit_assignfeedback_comment_path(assignfeedback_comment) %></td>
+        <td><%= link_to 'Destroy', assignfeedback_comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Assignfeedback Comment', new_assignfeedback_comment_path %>

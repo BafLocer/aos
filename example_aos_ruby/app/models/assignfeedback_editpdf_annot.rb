@@ -1,0 +1,2 @@
+class AssignfeedbackEditpdfAnnot < ApplicationRecord
+end

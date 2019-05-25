@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Assignment Upgrades</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Oldcmid</th>
+      <th>Oldinstance</th>
+      <th>Newcmid</th>
+      <th>Newinstance</th>
+      <th>Timecreated</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @assignment_upgrades.each do |assignment_upgrade| %>
+      <tr>
+        <td><%= assignment_upgrade.oldcmid %></td>
+        <td><%= assignment_upgrade.oldinstance %></td>
+        <td><%= assignment_upgrade.newcmid %></td>
+        <td><%= assignment_upgrade.newinstance %></td>
+        <td><%= assignment_upgrade.timecreated %></td>
+        <td><%= link_to 'Show', assignment_upgrade %></td>
+        <td><%= link_to 'Edit', edit_assignment_upgrade_path(assignment_upgrade) %></td>
+        <td><%= link_to 'Destroy', assignment_upgrade, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Assignment Upgrade', new_assignment_upgrade_path %>

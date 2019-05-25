@@ -1,0 +1,1 @@
+json.partial! "assignfeedback_editpdf_annots/assignfeedback_editpdf_annot", assignfeedback_editpdf_annot: @assignfeedback_editpdf_annot

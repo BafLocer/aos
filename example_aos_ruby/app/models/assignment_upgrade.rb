@@ -1,0 +1,2 @@
+class AssignmentUpgrade < ApplicationRecord
+end

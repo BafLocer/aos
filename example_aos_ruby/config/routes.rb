@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  resources :assignsubmission_files
+  resources :assignment_upgrades
+  resources :assignment_submissions
+  resources :assignfeedback_files
+  resources :assignfeedback_editpdf_quicks
+  resources :assignfeedback_editpdf_queues
+  resources :assignfeedback_editpdf_cmnts
+  resources :assignfeedback_editpdf_annots
+  resources :assignfeedback_comments
+  resources :assign_user_mappings
   resources :assign_user_flags
   resources :assign_plugin_configs
   resources :assign_overrides
@@ -19,6 +29,8 @@ Rails.application.routes.draw do
   resources :posts
   resources :blog_associations
   resources :blog_externals
-  resources :blog_externals 
+  resources :blog_externals
+  get 'welcome/index', as: :welcome
+  get 'welcome/insufficient_privileges', as: :ip
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

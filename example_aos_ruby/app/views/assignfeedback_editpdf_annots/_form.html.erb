@@ -1,0 +1,67 @@
+<%= form_with(model: assignfeedback_editpdf_annot, local: true) do |form| %>
+  <% if assignfeedback_editpdf_annot.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(assignfeedback_editpdf_annot.errors.count, "error") %> prohibited this assignfeedback_editpdf_annot from being saved:</h2>
+
+      <ul>
+      <% assignfeedback_editpdf_annot.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :gradeid %>
+    <%= form.text_field :gradeid %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pageno %>
+    <%= form.text_field :pageno %>
+  </div>
+
+  <div class="field">
+    <%= form.label :x %>
+    <%= form.text_field :x %>
+  </div>
+
+  <div class="field">
+    <%= form.label :y %>
+    <%= form.text_field :y %>
+  </div>
+
+  <div class="field">
+    <%= form.label :endx %>
+    <%= form.text_field :endx %>
+  </div>
+
+  <div class="field">
+    <%= form.label :endy %>
+    <%= form.text_field :endy %>
+  </div>
+
+  <div class="field">
+    <%= form.label :path %>
+    <%= form.text_area :path %>
+  </div>
+
+  <div class="field">
+    <%= form.label :type %>
+    <%= form.text_field :type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :colour %>
+    <%= form.text_field :colour %>
+  </div>
+
+  <div class="field">
+    <%= form.label :draft %>
+    <%= form.number_field :draft %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

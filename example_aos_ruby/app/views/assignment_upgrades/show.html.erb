@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Oldcmid:</strong>
+  <%= @assignment_upgrade.oldcmid %>
+</p>
+
+<p>
+  <strong>Oldinstance:</strong>
+  <%= @assignment_upgrade.oldinstance %>
+</p>
+
+<p>
+  <strong>Newcmid:</strong>
+  <%= @assignment_upgrade.newcmid %>
+</p>
+
+<p>
+  <strong>Newinstance:</strong>
+  <%= @assignment_upgrade.newinstance %>
+</p>
+
+<p>
+  <strong>Timecreated:</strong>
+  <%= @assignment_upgrade.timecreated %>
+</p>
+
+<%= link_to 'Edit', edit_assignment_upgrade_path(@assignment_upgrade) %> |
+<%= link_to 'Back', assignment_upgrades_path %>

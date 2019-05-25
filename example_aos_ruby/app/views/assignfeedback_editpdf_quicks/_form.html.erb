@@ -1,0 +1,37 @@
+<%= form_with(model: assignfeedback_editpdf_quick, local: true) do |form| %>
+  <% if assignfeedback_editpdf_quick.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(assignfeedback_editpdf_quick.errors.count, "error") %> prohibited this assignfeedback_editpdf_quick from being saved:</h2>
+
+      <ul>
+      <% assignfeedback_editpdf_quick.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :userid %>
+    <%= form.text_field :userid %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rawtext %>
+    <%= form.text_area :rawtext %>
+  </div>
+
+  <div class="field">
+    <%= form.label :width %>
+    <%= form.text_field :width %>
+  </div>
+
+  <div class="field">
+    <%= form.label :colour %>
+    <%= form.text_field :colour %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

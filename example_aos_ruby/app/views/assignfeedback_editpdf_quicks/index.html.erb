@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Assignfeedback Editpdf Quicks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Userid</th>
+      <th>Rawtext</th>
+      <th>Width</th>
+      <th>Colour</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @assignfeedback_editpdf_quicks.each do |assignfeedback_editpdf_quick| %>
+      <tr>
+        <td><%= assignfeedback_editpdf_quick.userid %></td>
+        <td><%= assignfeedback_editpdf_quick.rawtext %></td>
+        <td><%= assignfeedback_editpdf_quick.width %></td>
+        <td><%= assignfeedback_editpdf_quick.colour %></td>
+        <td><%= link_to 'Show', assignfeedback_editpdf_quick %></td>
+        <td><%= link_to 'Edit', edit_assignfeedback_editpdf_quick_path(assignfeedback_editpdf_quick) %></td>
+        <td><%= link_to 'Destroy', assignfeedback_editpdf_quick, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Assignfeedback Editpdf Quick', new_assignfeedback_editpdf_quick_path %>

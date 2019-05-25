@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Assignfeedback Editpdf Cmnts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Gradeid</th>
+      <th>X</th>
+      <th>Y</th>
+      <th>Width</th>
+      <th>Rawtext</th>
+      <th>Pageno</th>
+      <th>Colour</th>
+      <th>Draft</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @assignfeedback_editpdf_cmnts.each do |assignfeedback_editpdf_cmnt| %>
+      <tr>
+        <td><%= assignfeedback_editpdf_cmnt.gradeid %></td>
+        <td><%= assignfeedback_editpdf_cmnt.x %></td>
+        <td><%= assignfeedback_editpdf_cmnt.y %></td>
+        <td><%= assignfeedback_editpdf_cmnt.width %></td>
+        <td><%= assignfeedback_editpdf_cmnt.rawtext %></td>
+        <td><%= assignfeedback_editpdf_cmnt.pageno %></td>
+        <td><%= assignfeedback_editpdf_cmnt.colour %></td>
+        <td><%= assignfeedback_editpdf_cmnt.draft %></td>
+        <td><%= link_to 'Show', assignfeedback_editpdf_cmnt %></td>
+        <td><%= link_to 'Edit', edit_assignfeedback_editpdf_cmnt_path(assignfeedback_editpdf_cmnt) %></td>
+        <td><%= link_to 'Destroy', assignfeedback_editpdf_cmnt, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Assignfeedback Editpdf Cmnt', new_assignfeedback_editpdf_cmnt_path %>

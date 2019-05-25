@@ -1,0 +1,27 @@
+<%= form_with(model: assignfeedback_editpdf_queue, local: true) do |form| %>
+  <% if assignfeedback_editpdf_queue.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(assignfeedback_editpdf_queue.errors.count, "error") %> prohibited this assignfeedback_editpdf_queue from being saved:</h2>
+
+      <ul>
+      <% assignfeedback_editpdf_queue.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :submissionid %>
+    <%= form.text_field :submissionid %>
+  </div>
+
+  <div class="field">
+    <%= form.label :submissionattempt %>
+    <%= form.text_field :submissionattempt %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

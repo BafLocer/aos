@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  gradeid: 
+  x: 
+  'y': 
+  width: 
+  rawtext: MyText
+  pageno: 
+  colour: MyString
+  draft: 1
+
+two:
+  gradeid: 
+  x: 
+  'y': 
+  width: 
+  rawtext: MyText
+  pageno: 
+  colour: MyString
+  draft: 1

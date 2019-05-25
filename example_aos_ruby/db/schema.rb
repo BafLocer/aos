@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_24_170602) do
+ActiveRecord::Schema.define(version: 2019_05_25_104828) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -123,6 +123,110 @@ ActiveRecord::Schema.define(version: 2019_05_24_170602) do
     t.bigint "extensionduedate"
     t.string "workflowstate"
     t.bigint "allocatedmarker"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "assign_user_mappings", force: :cascade do |t|
+    t.bigint "assignment"
+    t.bigint "userid"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "assignfeedback_comments", force: :cascade do |t|
+    t.bigint "assignment"
+    t.bigint "grade"
+    t.text "commenttext"
+    t.integer "commentformat"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "assignfeedback_editpdf_annots", force: :cascade do |t|
+    t.bigint "gradeid"
+    t.bigint "pageno"
+    t.bigint "x"
+    t.bigint "y"
+    t.bigint "endx"
+    t.bigint "endy"
+    t.text "path"
+    t.string "type"
+    t.string "colour"
+    t.integer "draft"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "assignfeedback_editpdf_cmnts", force: :cascade do |t|
+    t.bigint "gradeid"
+    t.bigint "x"
+    t.bigint "y"
+    t.bigint "width"
+    t.text "rawtext"
+    t.bigint "pageno"
+    t.string "colour"
+    t.integer "draft"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "assignfeedback_editpdf_queues", force: :cascade do |t|
+    t.bigint "submissionid"
+    t.bigint "submissionattempt"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "assignfeedback_editpdf_quicks", force: :cascade do |t|
+    t.bigint "userid"
+    t.text "rawtext"
+    t.bigint "width"
+    t.string "colour"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "assignfeedback_files", force: :cascade do |t|
+    t.bigint "assignment"
+    t.bigint "grade"
+    t.bigint "numfiles"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "assignment_submissions", force: :cascade do |t|
+    t.bigint "assignment"
+    t.bigint "userid"
+    t.bigint "timecreated"
+    t.bigint "timemodified"
+    t.bigint "numfiles"
+    t.text "data1"
+    t.text "data2"
+    t.bigint "grade"
+    t.text "submissioncomment"
+    t.integer "format"
+    t.bigint "teacher"
+    t.bigint "timemarked"
+    t.integer "mailed"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "assignment_upgrades", force: :cascade do |t|
+    t.bigint "oldcmid"
+    t.bigint "oldinstance"
+    t.bigint "newcmid"
+    t.bigint "newinstance"
+    t.bigint "timecreated"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "assignsubmission_files", force: :cascade do |t|
+    t.bigint "assignment"
+    t.bigint "submission"
+    t.bigint "numfiles"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

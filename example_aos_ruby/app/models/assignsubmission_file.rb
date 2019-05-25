@@ -1,0 +1,2 @@
+class AssignsubmissionFile < ApplicationRecord
+end

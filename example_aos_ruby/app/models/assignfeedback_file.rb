@@ -1,0 +1,2 @@
+class AssignfeedbackFile < ApplicationRecord
+end

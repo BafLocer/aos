@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Assign User Mappings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Assignment</th>
+      <th>Userid</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @assign_user_mappings.each do |assign_user_mapping| %>
+      <tr>
+        <td><%= assign_user_mapping.assignment %></td>
+        <td><%= assign_user_mapping.userid %></td>
+        <td><%= link_to 'Show', assign_user_mapping %></td>
+        <td><%= link_to 'Edit', edit_assign_user_mapping_path(assign_user_mapping) %></td>
+        <td><%= link_to 'Destroy', assign_user_mapping, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Assign User Mapping', new_assign_user_mapping_path %>

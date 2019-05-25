@@ -1,0 +1,37 @@
+<%= form_with(model: assignfeedback_comment, local: true) do |form| %>
+  <% if assignfeedback_comment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(assignfeedback_comment.errors.count, "error") %> prohibited this assignfeedback_comment from being saved:</h2>
+
+      <ul>
+      <% assignfeedback_comment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :assignment %>
+    <%= form.text_field :assignment %>
+  </div>
+
+  <div class="field">
+    <%= form.label :grade %>
+    <%= form.text_field :grade %>
+  </div>
+
+  <div class="field">
+    <%= form.label :commenttext %>
+    <%= form.text_area :commenttext %>
+  </div>
+
+  <div class="field">
+    <%= form.label :commentformat %>
+    <%= form.number_field :commentformat %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

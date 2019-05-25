@@ -1,0 +1,2 @@
+class AssignUserMapping < ApplicationRecord
+end

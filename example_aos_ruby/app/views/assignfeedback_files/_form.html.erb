@@ -1,0 +1,32 @@
+<%= form_with(model: assignfeedback_file, local: true) do |form| %>
+  <% if assignfeedback_file.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(assignfeedback_file.errors.count, "error") %> prohibited this assignfeedback_file from being saved:</h2>
+
+      <ul>
+      <% assignfeedback_file.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :assignment %>
+    <%= form.text_field :assignment %>
+  </div>
+
+  <div class="field">
+    <%= form.label :grade %>
+    <%= form.text_field :grade %>
+  </div>
+
+  <div class="field">
+    <%= form.label :numfiles %>
+    <%= form.text_field :numfiles %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

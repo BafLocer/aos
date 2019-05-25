@@ -1,0 +1,2 @@
+class AssignfeedbackComment < ApplicationRecord
+end

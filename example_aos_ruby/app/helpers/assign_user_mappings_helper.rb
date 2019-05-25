@@ -1,0 +1,2 @@
+module AssignUserMappingsHelper
+end
