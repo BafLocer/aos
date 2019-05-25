@@ -6,7 +6,7 @@ class CreateAnalyticsModelsLogs < ActiveRecord::Migration[5.2]
       t.string :target, null: false
       t.text :indicators, null: false
       t.string :timespliting
-      t.integer :score, null: false
+      t.integer :score, :precision => 2, null: false
       t.text :info
       t.text :dir, null: false
       t.integer :timecreated, :limit => 8, null: false
