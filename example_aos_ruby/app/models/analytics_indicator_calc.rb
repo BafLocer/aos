@@ -5,6 +5,6 @@ class AnalyticsIndicatorCalc < ApplicationRecord
   validates :sampleorign, length: {maximum: 255}, presence: true
   validates :sampleid, presence: true
   validates :indicator, length: {maximum: 255}, presence: true
-  validates :value, length: {maximum: 10}, presence: true
+  validates :value, length: {maximum: 10}
   validates :timecreated, presence: true
 end
