@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_25_104828) do
+ActiveRecord::Schema.define(version: 2019_05_26_112541) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -348,5 +348,56 @@ ActiveRecord::Schema.define(version: 2019_05_25_104828) do
     t.index ["blog_association_id"], name: "index_posts_on_blog_association_id"
   end
 
+  create_table "role_users", force: :cascade do |t|
+    t.bigint "role_id", null: false
+    t.bigint "user_id", null: false
+    t.json "data"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["role_id"], name: "index_role_users_on_role_id"
+    t.index ["user_id"], name: "index_role_users_on_user_id"
+  end
+
+  create_table "roles", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "info", null: false
+    t.text "full_info", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["info"], name: "index_roles_on_info", unique: true
+    t.index ["name"], name: "index_roles_on_name", unique: true
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "email", null: false
+    t.string "crypted_password"
+    t.string "salt"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "remember_me_token"
+    t.datetime "remember_me_token_expires_at"
+    t.string "reset_password_token"
+    t.datetime "reset_password_token_expires_at"
+    t.datetime "reset_password_email_sent_at"
+    t.string "activation_state"
+    t.string "activation_token"
+    t.datetime "activation_token_expires_at"
+    t.integer "failed_logins_count", default: 0
+    t.datetime "lock_expires_at"
+    t.string "unlock_token"
+    t.datetime "last_login_at"
+    t.datetime "last_logout_at"
+    t.datetime "last_activity_at"
+    t.string "last_login_from_ip_address"
+    t.index ["activation_token"], name: "index_users_on_activation_token"
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["last_logout_at", "last_activity_at"], name: "index_users_on_last_logout_at_and_last_activity_at"
+    t.index ["remember_me_token"], name: "index_users_on_remember_me_token"
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token"
+    t.index ["unlock_token"], name: "index_users_on_unlock_token"
+  end
+
   add_foreign_key "posts", "blog_associations"
+  add_foreign_key "role_users", "roles"
+  add_foreign_key "role_users", "users"
 end

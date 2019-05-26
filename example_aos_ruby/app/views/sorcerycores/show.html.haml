@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Email:
+  = @sorcerycore.email
+%p
+  %b Crypted password:
+  = @sorcerycore.crypted_password
+%p
+  %b Salt:
+  = @sorcerycore.salt
+
+= link_to 'Edit', edit_sorcerycore_path(@sorcerycore)
+\|
+= link_to 'Back', sorcerycores_path

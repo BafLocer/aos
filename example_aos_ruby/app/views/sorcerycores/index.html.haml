@@ -1,0 +1,25 @@
+%h1 Listing sorcerycores
+
+%table
+  %thead
+    %tr
+      %th Email
+      %th Crypted password
+      %th Salt
+      %th
+      %th
+      %th
+
+  %tbody
+    - @sorcerycores.each do |sorcerycore|
+      %tr
+        %td= sorcerycore.email
+        %td= sorcerycore.crypted_password
+        %td= sorcerycore.salt
+        %td= link_to 'Show', sorcerycore
+        %td= link_to 'Edit', edit_sorcerycore_path(sorcerycore)
+        %td= link_to 'Destroy', sorcerycore, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Sorcerycore', new_sorcerycore_path
